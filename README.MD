@@ -12,7 +12,7 @@ will sometime comment in french or english
 
 - folder for lesson
 
-- notion folder will have the code for the lesson
+- lesson folder will have the code for the lesson
 
 ## motivation
 
