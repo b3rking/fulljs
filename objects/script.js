@@ -41,3 +41,13 @@ console.log('name of the cafe' in cafe)
 // loop through object
 
 for (let usr in user) console.log(usr);
+
+// cloning an object
+
+let clone = {}
+
+for (let key in user) {
+    clone[key] = user[key]
+}
+
+console.log('clone say ' +clone.name)
