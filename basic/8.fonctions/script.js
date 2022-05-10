@@ -49,10 +49,68 @@ function access() {
         alert("access granted");
     } else {
         alert("access denied!");
-        document.write(checkAge(ans))
+        document.write(checkAge(ans));
     }
 }
 
 access();
 
 // :D
+
+//========================================================
+
+// fonctions expression
+
+// fonctions declaration
+function sayHi() {
+    //
+}
+
+// fonctions expression
+const saYhi = function () {
+    // callback
+    callbackI("quan");
+};
+
+function callbackI(nom) {
+    alert("test" + nom);
+}
+
+saYhi();
+
+// Une Fonction Expression est créée lorsque l’exécution l’atteint et est utilisable à partir de cet moment.
+
+// Une fois que le flux d’exécution passe à droite de l’affectation, let sum = function… – voilà, la fonction est créée et peut désormais être utilisée (assignée, appelée, etc.) à partir de maintenant.
+
+// Les déclarations de fonction sont différentes.
+
+// Une fonction déclaration peut être appelée plus tôt que sa définition.
+
+// Par exemple, une fonction déclaration globale est visible dans tout le script, peu importe où elle se trouve.
+
+// ==================================================================
+
+// arrow function
+
+let func = () => {
+    // du code a executer
+};
+
+let sum = (a, b) => a + b;
+
+// ceci est la forme recourcie de
+
+// let sum = function(a, b) {
+//     return a + b
+// }
+
+// creation d'une fonction dynamiquement
+
+let age = prompt("quel age as-tu?");
+
+const welcome =
+    age >= 18
+        ? () => alert("bienvenue entre")
+        : () => alert("reviens dans quelque années");
+
+welcome()
