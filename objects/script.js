@@ -102,3 +102,20 @@ function User(name = "kissa", age = 30) {
 
 let usr = new User("bersy", 52);
 console.log(usr);
+
+
+// ===========================================
+// optional chaining
+// ===========================================
+
+// learn the usage of "?" showing an element if only is visible
+
+// first way
+
+let users = {}
+
+console.log(users.adress ? users.adress.street : undefined);
+
+// second way
+
+console.log(users.adress && users.adress.street);
