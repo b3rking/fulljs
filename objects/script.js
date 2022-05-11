@@ -51,3 +51,31 @@ for (let key in user) {
 }
 
 console.log('clone say ' +clone.name)
+
+// objecct method "this"
+
+// create an object
+// let person = {
+//     name: "john",
+//     age: 30
+// }
+
+// create an object method
+// person.sayHi = () => {
+//     console.log('hello!');
+// }
+
+// person.sayHi()
+
+// another way to create method
+
+let person = {
+    name: "john",
+    age: 30,
+    sayHi() {
+        // this is the current object
+        console.log(`${this.name} wish you a good day!`)
+    }
+}
+
+person.sayHi()
