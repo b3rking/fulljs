@@ -115,16 +115,16 @@ console.log(words[1]);
 
 // delete item
 // parameters => first the index, and second the number of element
-words.splice(1, 1)
+words.splice(1, 1);
 
 // delete and replace
-words.splice(2, 3, 'php', 'js', 'python')
+words.splice(2, 3, "php", "js", "python");
 
 // add element without deleting existing just set the number of element to delete to zero
-words.splice(2, 0, 'laravel', 'reactjs', 'react native', 'nodejs', 'nextjs')
+words.splice(2, 0, "laravel", "reactjs", "react native", "nodejs", "nextjs");
 
 // using a negative index means starting from the end
-words.splice(-0, 0, 'added to the end')
+words.splice(-0, 0, "added to the end");
 
 console.log(words);
 
@@ -133,7 +133,7 @@ console.log(words);
 // ==================
 
 // to copy an array take the starting index and the ending index
-console.log(words.slice(0, words.length))
+console.log(words.slice(0, words.length));
 
 // ========================
 // iterate with forEach
@@ -146,9 +146,9 @@ arr.forEach((item, index, array) => {
 */
 
 words.forEach((el, index, arr) => {
-    arr[index] = el+ 'here the mod!'
+    arr[index] = el + "here the mod!";
     // console.log(`${el} is at position ${index+1}`);
-})
+});
 
 console.log(words);
 
@@ -157,10 +157,36 @@ console.log(words);
 // indexOf, lastIndexOf, includes
 // ====================================
 
-console.log(words.indexOf('playhere the mod!'))
-console.log(words.lastIndexOf('playhere the mod!'))
-console.log(words.includes('playhere the mod!'))
+console.log(words.indexOf("playhere the mod!"));
+console.log(words.lastIndexOf("playhere the mod!"));
+console.log(words.includes("playhere the mod!"));
+console.log("\n\n\n");
 
-// more js array method!
+// find
 
-// find, filter, etc...
+let peoples = [
+    {
+        name: "john",
+        age: 25,
+    },
+    {
+        name: "jane",
+        age: 30,
+    },
+    {
+        name: "mike",
+        age: 26,
+    },
+    {
+        name: "jonas",
+        age: 18,
+    },
+];
+
+let is_there = peoples.forEach((item) => {
+    item.find((item, index, array) => {
+        return item.name === "jack";
+    });
+});
+
+console.log(is_there);
