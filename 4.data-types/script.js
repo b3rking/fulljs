@@ -183,10 +183,44 @@ let peoples = [
     },
 ];
 
-let is_there = peoples.forEach((item) => {
-    item.find((item, index, array) => {
-        return item.name === "jack";
-    });
-});
+// let is_there = peoples.forEach((item) => {
+//     item.find((item, index, array) => {
+//         return item.name === "jack";
+//     });
+// });
 
-console.log(is_there);
+// console.log(is_there);
+
+// ========================================================
+//              OBJECT.KEYS, VALUES, ENTRIES
+// ========================================================
+
+console.log(Object.keys(peoples))
+console.log(Object.values(peoples))
+console.log(Object.entries(peoples))
+
+// ========================================================
+//          destructuring
+
+const myarr = ['jorge', 'mendes'];
+
+const [firstName, surName] = myarr;
+
+console.log(firstName, surName);
+
+// ========================================================
+//          DATE AND TIME
+
+let now = new Date(2021, 5, 2);
+
+console.log(now.getTimezoneOffset());
+
+// =========================================================
+
+//                      JSON!
+
+
+// JSON.stringify
+
+let json = JSON.stringify(peoples)
+console.log(typeof json, json);
